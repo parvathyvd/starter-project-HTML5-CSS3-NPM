@@ -6,6 +6,54 @@
 img {
   max-width: 100%; }
 
+.container {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "header header header header" "aside aside main main"  "nav nav main main"   "section section section section" "footer footer footer footer";
+  grid-gap: 1rem;
+  text-align: center;
+  color: white;
+  text-transform: uppercase; }
+  .container > * {
+    padding: 10rem; }
+
+.header {
+  background: #45b8ee;
+  grid-area: header; }
+
+.aside {
+  background: #45b8ee;
+  grid-area: aside; }
+
+.nav {
+  background: #45b8ee;
+  grid-area: nav; }
+
+.main {
+  background: #45b8ee;
+  grid-area: main; }
+
+.section {
+  background: #45b8ee;
+  grid-area: section; }
+
+.footer {
+  background: #45b8ee;
+  grid-area: footer; }
+
+@media screen and (max-width: 760px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "header header header header" "footer footer footer footer" "aside aside aside aside"  "nav nav nav nav" "main main main main"  "section section section section";
+    grid-gap: 1rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase; }
+    .container > * {
+      padding: 10rem; } }
+
 html {
   /* Setting font-size to 62.5% allows 1rem to be 10px */
   font-size: 62.5%; }
@@ -21,3 +69,6 @@ html {
   @media (min-width: 112.5em) {
     html {
       font-size: 75%; } }
+
+body {
+  font-size: 1.8rem; }
